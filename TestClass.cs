@@ -8,7 +8,6 @@ namespace Student
 {
     class TestClass
     {
-
         public void TestGit()
         {
             Console.WriteLine("working");

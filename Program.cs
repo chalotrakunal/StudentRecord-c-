@@ -11,6 +11,8 @@ namespace Student
         static void Main(string[] args)
         {
             Students student = new Students();
+            TestClass testClass = new TestClass();
+            testClass.TestGit();
             Console.WriteLine("How many no of  student records you want : ");          //specify  the count of student for which we want to store the record
             var record = Console.ReadLine();
             int noOfStudent = Convert.ToInt32(record);
