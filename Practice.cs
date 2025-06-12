@@ -16,6 +16,12 @@ namespace Student
             public string Last { get; set; }
             public int ID { get; set; }
             public List<int> Scores;
+
+            public override string ToString()
+            {
+                var scores = Scores != null ? string.Join(", ", Scores) : string.Empty;
+                return $"{First} {Last} (ID: {ID}) Scores: [{scores}]";
+            }
         }
 
         // Create a data source by using a collection initializer.
