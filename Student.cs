@@ -13,6 +13,12 @@ namespace Student
         public int ID { get; set; }
         public List<int> Scores;
 
+        public override string ToString()
+        {
+            var scores = Scores != null ? string.Join(", ", Scores) : string.Empty;
+            return $"{First} {Last} (ID: {ID}) Scores: [{scores}]";
+        }
+
        static List<Student> students = new List<Student>
         
             
