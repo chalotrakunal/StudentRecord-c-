@@ -35,6 +35,15 @@ namespace Student
             var linq = (from record in records orderby record._studentMarks descending select record).ToList();
             studrecords = linq.ToList();
         }
+
+        public List<int> GetSortedMarks()
+        {
+            if (studrecords == null)
+            {
+                return new List<int>();
+            }
+            return studrecords.Select(r => r._studentMarks).ToList();
+        }
         public void DisplayStudentRecords()                                 // display student records with rank
         {
             
